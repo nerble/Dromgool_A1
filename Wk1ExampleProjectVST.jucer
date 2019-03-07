@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="ECypJQ" name="Wk1ExampleProjectVST" projectType="audioplug"
-              jucerVersion="5.4.3" pluginFormats="buildAU,buildVST,buildVST3">
+              jucerVersion="5.4.3" pluginFormats="buildAU,buildStandalone,buildVST,buildVST3">
   <MAINGROUP id="o4xqNA" name="Wk1ExampleProjectVST">
     <GROUP id="{9D6C4FB4-F90B-9514-28CF-683D2075CAE0}" name="Source">
       <FILE id="wFHR3Y" name="PluginProcessor.cpp" compile="1" resource="0"

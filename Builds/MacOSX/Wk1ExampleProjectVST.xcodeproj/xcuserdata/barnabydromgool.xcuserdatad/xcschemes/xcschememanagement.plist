@@ -17,6 +17,11 @@
 		<key>Wk1ExampleProjectVST - Shared Code.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Wk1ExampleProjectVST - Standalone Plugin.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>Wk1ExampleProjectVST - VST.xcscheme_^#shared#^_</key>
