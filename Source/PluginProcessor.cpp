@@ -97,12 +97,14 @@ void Wk1exampleProjectVstAudioProcessor::prepareToPlay (double sampleRate, int s
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    // Setup stuff
 }
 
 void Wk1exampleProjectVstAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
+    // Cleanup code goes here
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -131,6 +133,7 @@ bool Wk1exampleProjectVstAudioProcessor::isBusesLayoutSupported (const BusesLayo
 
 void Wk1exampleProjectVstAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
+    // Where the work happens
     ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
@@ -149,12 +152,19 @@ void Wk1exampleProjectVstAudioProcessor::processBlock (AudioBuffer<float>& buffe
     // Make sure to reset the state if your inner loop is processing
     // the samples and the outer loop is handling the channels.
     // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
+    // interleaved by keeping the same state. (don't worry about trying to do that for the moment)
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
+        // put channel 0 audio buffer into channelData variable
+        // put channel 0 audio buffer into channelData variable
         auto* channelData = buffer.getWritePointer (channel);
 
         // ..do something to the data...
+        for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
+        {
+            channelData[sample] = random.nextFloat() - 1;
+        }
+        
     }
 }
 
